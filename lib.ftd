@@ -499,6 +499,7 @@ align-self: center
 style: bold
 role: $inherited.types.heading-medium
 margin-bottom.px: 8
+color: #d2b863
 
 -- ftd.text: $image-with-content-mobile.body
 role: $inherited.types.copy-regular
@@ -558,6 +559,7 @@ opacity: 0.7
 align-self: center
 role: $inherited.types.heading-medium
 margin-bottom.px: 38
+color: #d2b863
 
 -- ftd.text: $image-with-content-desktop.body
 role: $inherited.types.copy-regular
@@ -588,10 +590,9 @@ body body:
 
 -- ftd.column:
 padding-horizontal.vw if { ftd.device == "desktop" }: 5
-margin-top.vh if { ftd.device == "desktop" } : 10
-margin-bottom.vh if { ftd.device == "desktop" } : 5
+margin-vertical.vh if { ftd.device == "desktop" } : 5
 margin-vertical.vh if { ftd.device == "mobile" } : 1
-id: aboutus
+id: about
 
 -- ftd.column:
 if: { ftd.device == "mobile" }
@@ -625,6 +626,12 @@ border-radius.px: 20
 -- ftd.row:
 if: { ftd.device == "desktop" }
 
+-- ftd.image:
+src: $about.pic
+width.fixed.percent: 40
+align-self: center
+border-radius.px: 20
+
 -- ftd.column:
 align-self: center
 margin-left.percent: 4
@@ -643,12 +650,6 @@ color: White
 opacity: 0.8
 
 -- end: ftd.column
-
--- ftd.image:
-src: $about.pic
-width.fixed.percent: 40
-align-self: center
-border-radius.px: 20
 
 -- end: ftd.row
 
@@ -736,6 +737,7 @@ align-self: center
 style: bold
 role: $inherited.types.heading-medium
 margin-bottom.px: 8
+color: #d2b863
 
 -- ftd.text: $image-with-content-mobile-2.body
 role: $inherited.types.copy-regular
@@ -788,6 +790,7 @@ opacity: 0.7
 align-self: center
 role: $inherited.types.heading-medium
 margin-bottom.px: 38
+color: #d2b863
 
 -- ftd.text: $image-with-content-desktop-2.body
 role: $inherited.types.copy-regular
@@ -1151,7 +1154,7 @@ body content:
 -- ftd.column:
 width: fill-container
 align-content: center
-;;background.image: $assets.files.assets.bg-2.png
+background.image: $assets.files.assets.bg-2.png
 height.fixed.vh: 100
 
 -- ftd.column:
@@ -1171,7 +1174,8 @@ color: white
 margin-top.vh: 1
 margin-bottom.vh: 5
 role: $inherited.types.heading-large
-color: White
+style: regular
+color: #d2b863
 text-align: center
 
 -- ftd.row:
@@ -1253,7 +1257,7 @@ body content:
 
 -- ftd.row:
 width: fill-container
-;;background.image: $assets.files.assets.bg.png
+background.image: $assets.files.assets.bg.png
 height.fixed.vh: 100
 
 

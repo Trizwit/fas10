@@ -18,4 +18,55 @@ cta-button-1-url: https://github.com/Trizwit/FastnUI/blob/main/CONTRIBUTING.md
 
 Empowering Developers, Enriching Open Source
 
+-- lib.about: About fas10
+pic: $assets.files.assets.fas10-logo.png
+
+Welcome to the 10th-anniversary edition of Hacktober Fest! 🎉 This year, we're thrilled to
+introduce you to FAS10, a month-long open-source extravaganza dedicated to advancing the 
+FASTNUI Web Components Library.
+
+FAS10 marks a significant milestone in the world of open source and programming. It's not 
+just another Hacktober Fest; it's a celebration of a decade of innovation, collaboration, 
+and community building. Our mission is clear:- to empower the next generation of programmers 
+with the tools they need to bring their projects to life. By participating in FAS10, you 
+become a vital part of this mission.
+
+-- lib.container-with-title: Why fas10?
+$container-id: why
+
+-- lib.image-with-content: Empowering Developers for the Future:
+pic: $assets.files.assets.empower.png
+number: 01
+
+"FAS10" is all about empowerment. It's about equipping the next generation of programmers 
+with the tools and resources they need to succeed. By focusing on enhancing the FASTNUI 
+Web Components Library, we're making it easier for developers to create web projects 
+efficiently and with high-quality components. This means smoother development workflows, 
+reduced development time, and ultimately, the ability to bring creative ideas to life more 
+easily.
+
+-- lib.image-with-content: Building a Strong Open-Source Community
+pic: $assets.files.assets.open-source.png
+number: 02
+
+Open source is not just about code; it's about community. "FAS10" continues the tradition 
+of Hacktober Fest by fostering a strong, supportive, and inclusive open-source community. 
+It's an opportunity to engage with aspiring developers early in their journey and provide 
+them with the guidance and support they need to become proficient with FASTN and 
+open-source practices. This community-building aspect ensures that the open-source spirit 
+continues to thrive.
+
+-- lib.image-with-content: Recognition and Rewards
+pic: $assets.files.assets.reward.avif
+number: 03
+
+In addition to skill development and community building, "FAS10" offers tangible rewards 
+for participants. Digital NFT certificates are a testament to your contributions to open 
+source, serving as a digital badge of honor. Those who go above and beyond by creating ten 
+unique components following the guidelines have the chance to earn exciting swag items. 
+Additionally, outstanding Twitter posts can win digital rewards, adding an element of 
+friendly competition to the campaign.
+
+-- end: lib.container-with-title
+
 -- end: lib.page
