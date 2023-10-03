@@ -1110,6 +1110,7 @@ optional string text-1:
 optional string text-2:
 optional string text-3:
 string cta-button-1:
+string cta-button-1-url:
 body content:
 
 -- ftd.column:
@@ -1120,6 +1121,7 @@ if: { ftd.device == "mobile" }
 heading: $hero.heading
 text-1: $hero.text-1
 cta-button-1: $hero.cta-button-1
+cta-button-1-url: $hero.cta-button-1-url
 content: $hero.content
 
 -- hero-desktop:
@@ -1127,6 +1129,7 @@ if: { ftd.device == "desktop" }
 heading: $hero.heading
 text-1: $hero.text-1
 cta-button-1: $hero.cta-button-1
+cta-button-1-url: $hero.cta-button-1-url
 content: $hero.content
 
 -- end: ftd.column
@@ -1142,6 +1145,7 @@ optional string text-1:
 optional string text-2:
 optional string text-3:
 string cta-button-1:
+string cta-button-1-url:
 body content:
 
 -- ftd.column:
@@ -1225,7 +1229,7 @@ color: #ffac1d
 -- end: ftd.row
 
 -- button-3: $hero-mobile.cta-button-1
-link: https://github.com/Trizwit/fastnfoliotemp
+link: $hero-mobile.cta-button-1-url
 
 -- end: ftd.column
 
@@ -1244,6 +1248,7 @@ optional string text-1:
 optional string text-2:
 optional string text-3:
 string cta-button-1:
+string cta-button-1-url:
 body content:
 
 -- ftd.row:
@@ -1266,6 +1271,7 @@ color: white
 
 -- ftd.text: $hero-desktop.content
 margin-top.vh: 1
+text-align: center
 margin-bottom.vh: 5
 role: $inherited.types.heading-large
 style: regular
@@ -1331,7 +1337,7 @@ color: #faac1d
 -- end: ftd.row
 
 -- button-4: $hero-desktop.cta-button-1
-link: https://github.com/Trizwit/fastnfoliotemp
+link: $hero-desktop.cta-button-1-url
 
 -- end: ftd.column
 
