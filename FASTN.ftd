@@ -1,19 +1,17 @@
 -- import: fastn
 
 -- fastn.package: trizwit.github.io/fas10
-favicon: /-/trizwit.github.io/fas10/favicon.ico
+favicon: /-/trizwit.github.io/fas10/assets/fast10-logo.png
 
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
 -- fastn.dependency: fastn-community.github.io/footer
 -- fastn.dependency: fastn-community.github.io/roboto-typography
 -- fastn.dependency: fastn-community.github.io/dark-flame-cs
+-- fastn.dependency: openfastn.trizwit.com
+-- fastn.dependency: fastnfolio.trizwit.com
+-- fastn.dependency: sarvom.github.io/jetbrains-typography
 
 -- fastn.auto-import: trizwit.github.io/fas10/FASTN/ds
 -- fastn.auto-import: trizwit.github.io/fas10/assets
+-- fastn.auto-import: trizwit.github.io/fas10/lib
 -- fastn.auto-import: doc-site
-
--- fastn.sitemap:
-
-# Home: index.html
-
-- Right Sidebar Sample: /sidebar/
