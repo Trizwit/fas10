@@ -5,16 +5,17 @@
 -- lib.navbar: 
 cta-text-1: Home
 cta-text-2: About
-cta-text-3: Campus Partners
-cta-text-4: Contribute
+cta-text-3: Why fas10
+cta-text-4: How to contribute
 cta-button-1: Participate
-cta-button-1-url: https://github.com/Trizwit/fastnfoliotemp
+cta-button-1-url: https://github.com/Trizwit/FastnUI
 logo: $assets.files.assets.fas10-logo.png
 
--- lib.hero: FAS10
+-- lib.hero: fas10
 text-1: October 2023
 cta-button-1: Start Hacking
+cta-button-1-url: https://github.com/Trizwit/FastnUI/blob/main/CONTRIBUTING.md
 
-Craft your digital identity
+Empowering Developers, Enriching Open Source
 
 -- end: lib.page

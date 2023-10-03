@@ -1,7 +1,7 @@
 -- import: fastn
 
 -- fastn.package: trizwit.github.io/fas10
-favicon: /-/trizwit.github.io/fas10/assets/fast10-logo.png
+favicon: /-/trizwit.github.io/fas10/assets/fas10-logo.png
 
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
 -- fastn.dependency: fastn-community.github.io/footer
