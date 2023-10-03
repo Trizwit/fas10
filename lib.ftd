@@ -1,0 +1,1340 @@
+-- import: sarvom.github.io/jetbrains-typography
+
+-- component page:
+optional ftd.image-src logo:
+optional string cta-text-1: 
+optional string cta-text-2: 
+optional string cta-text-3: 
+optional string cta-text-4: 
+optional string cta-text-5: 
+optional string cta-text-6: 
+optional string cta-text-7: 
+optional string cta-text-8:   
+optional string cta-text-9:  
+optional string cta-text-10: 
+optional string cta-button-1: 
+optional string cta-button-2: 
+children c:
+
+-- ftd.column:
+width: fill-container
+types: $jetbrains-typography.types
+background.linear-gradient: $lg
+
+-- ftd.column:
+width: fill-container
+children: $page.c
+
+-- end: ftd.column
+
+-- footer:
+icon-1: $assets.files.assets.linkedIn.png
+url-1: https://www.linkedin.com/company/trizwit/
+icon-2: $assets.files.assets.twit.svg
+url-2: https://twitter.com/trizwit
+icon-3: $assets.files.assets.github.svg
+url-3: https://github.com/Trizwit
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+
+
+
+
+
+
+-- ftd.linear-gradient lg:
+direction: top-right
+colors: $color-values-2
+
+-- ftd.linear-gradient-color list color-values-2:
+
+-- ftd.linear-gradient-color: #000000
+
+-- ftd.linear-gradient-color: #222222
+
+-- end: color-values-2
+
+
+
+
+
+
+
+
+
+-- component navbar:
+ftd.image-src logo:
+optional caption name:
+optional string cta-text-1:
+optional string cta-text-2:
+optional string cta-text-3:
+optional string cta-text-4:
+optional string cta-text-5:
+optional string cta-text-6:
+optional string cta-text-7:
+optional string cta-text-8:
+optional string cta-text-9:
+optional string cta-text-10:
+optional string cta-button-1:
+optional string cta-button-1-url:
+optional string cta-button-2:
+
+-- ftd.column:
+width: fill-container
+z-index: 1000
+sticky: true
+
+-- navbar-mobile:
+if: { ftd.device == "mobile" }
+name: $navbar.name
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+cta-text-4: $navbar.cta-text-4
+cta-button-1: $navbar.cta-button-1
+cta-button-1-url: $navbar.cta-button-1-url
+logo: $navbar.logo
+
+
+-- navbar-desktop:
+if: { ftd.device == "desktop" }
+name: $navbar.name
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+cta-text-4: $navbar.cta-text-4
+cta-button-1: $navbar.cta-button-1
+cta-button-1-url: $navbar.cta-button-1-url
+logo: $navbar.logo
+
+-- end: ftd.column
+
+-- end: navbar
+
+
+
+
+
+
+
+
+
+
+-- component navbar-mobile:
+ftd.image-src logo:
+optional caption name:
+optional string cta-text-1:
+optional string cta-text-2:
+optional string cta-text-3:
+optional string cta-text-4:
+optional string cta-text-5:
+optional string cta-text-6:
+optional string cta-text-7:
+optional string cta-text-8:
+optional string cta-text-9:
+optional string cta-text-10:
+optional string cta-button-1:
+optional string cta-button-1-url:
+optional string cta-button-2:
+ftd.image-src menu: $assets.files.assets.menu.svg
+ftd.image-src close: $assets.files.assets.close.svg
+boolean $open: false
+
+-- ftd.column:
+padding.px: 8
+width: fill-container
+background.solid: #170f1e
+height: hug-content
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.image:
+src: $navbar-mobile.logo
+height.fixed.px: 40
+margin-left.px: 8
+
+-- ftd.image:
+if: { !navbar-mobile.open }
+height.fixed.px: 32
+align-self: center
+src: $navbar-mobile.menu
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = true)
+
+-- ftd.image:
+if: { navbar-mobile.open }
+height.fixed.px: 32
+align-self: center
+src: $navbar-mobile.close
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { navbar-mobile.open }
+margin-top.px: 16
+width: fill-container
+spacing.fixed.px: 8
+align-content: left
+padding-left.px: 16
+
+-- ftd.text: $navbar-mobile.cta-text-1
+role: $inherited.types.heading-tiny
+margin-top.px: 8
+color: white
+link: index.html
+
+-- ftd.text: $navbar-mobile.cta-text-2
+role: $inherited.types.heading-tiny
+margin-top.px: 8
+color: white
+link: index.html#aboutus
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+
+-- ftd.text: $navbar-mobile.cta-text-3
+role: $inherited.types.heading-tiny
+margin-top.px: 8
+color: white
+link: index.html#sponsors
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- ftd.text: $navbar-mobile.cta-text-4
+role: $inherited.types.heading-tiny
+margin-top.px: 8
+color: white
+link: index.html#participate
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- ftd.row:
+width: fill-container
+margin-top.px: 24
+spacing.fixed.px: 8
+align-content: center
+
+-- button-2: $navbar-mobile.cta-button-1
+link: $navbar-mobile.cta-button-1-url
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: navbar-mobile
+
+
+
+
+
+
+
+
+
+
+-- component navbar-desktop:
+ftd.image-src logo:
+optional caption name:
+optional string cta-text-1:
+optional string cta-text-2:
+optional string cta-text-3:
+optional string cta-text-4:
+optional string cta-text-5:
+optional string cta-text-6:
+optional string cta-text-7:
+optional string cta-text-8:
+optional string cta-text-9:
+optional string cta-text-10:
+optional string cta-button-1:
+optional string cta-button-1-url:
+optional string cta-button-2:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 16
+padding.vh: 1
+height.fixed.vh: 10
+background.solid: #170f1e
+align-content: center
+z-index: 99999
+sticky: true
+
+-- ftd.image:
+src: $navbar-desktop.logo
+height.fixed.px: 64
+padding.vh: 1
+align-self: center
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-1
+cta-text-url: index.html
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-2
+cta-text-url: index.html#aboutus
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-3
+cta-text-url: index.html#sponsors
+
+-- navbar-text: 
+cta-text: $navbar-desktop.cta-text-4
+cta-text-url: index.html#participate
+
+-- ftd.row:
+spacing.fixed.px: 16
+align-self: center
+align-content: right
+margin-right.vw: 4
+
+-- button-5: $navbar-desktop.cta-button-1
+link: $navbar-desktop.cta-button-1-url
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: navbar-desktop
+
+
+
+
+
+
+
+
+
+
+-- component navbar-text:
+boolean $is-active: false
+string cta-text:
+string cta-text-url:
+
+-- ftd.column:
+height: fill-container
+align-content: center
+margin-horizontal.vh: 2
+border-bottom-width.px if { navbar-text.is-active }: 4
+border-color: #d2b863
+$on-mouse-enter$: $ftd.set-bool($a = $navbar-text.is-active, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $navbar-text.is-active, v = false)
+
+-- ftd.text: $navbar-text.cta-text
+role: $inherited.types.label-large
+style: semi-bold
+color: white
+align-self: center
+link: $$navbar-text.cta-text-url
+
+-- end: ftd.column
+
+-- end: navbar-text
+
+
+
+
+
+
+
+
+
+-- component footer:
+ftd.image-src icon-1:
+string url-1:
+ftd.image-src icon-2:
+string url-2:
+ftd.image-src icon-3:
+string url-3:
+
+-- ftd.column:
+align-self: center
+align-content: center
+width: fill-container
+margin-vertical.vh: 6
+
+-- ftd.row:
+width.fixed.percent: 90
+align-self: center
+align-content: center
+spacing.fixed.px: 24
+padding-bottom.px: 27
+border-bottom-width.px: 2
+
+-- ftd.image:
+src: $footer.icon-1
+height.fixed.px: 32
+width.fixed.px: 32
+link: $footer.url-1
+
+-- ftd.image:
+src: $footer.icon-2
+height.fixed.px: 32
+width.fixed.px: 32
+link: $footer.url-2
+
+-- ftd.image:
+src: $footer.icon-3
+height.fixed.px: 32
+width.fixed.px: 32
+link: $footer.url-3
+
+-- end: ftd.row
+
+-- ftd.row:
+margin-top.vh: 1
+spacing.fixed.vh: 0.9
+
+-- ftd.text: Made with 
+role: $inherited.types.label-large
+style: semi-bold
+color: white
+
+-- ftd.text: FASTN 
+role: $inherited.types.label-large
+style: semi-bold
+color: white
+link: https://fastn.com/
+
+-- ftd.text: by
+role: $inherited.types.label-large
+style: semi-bold
+color: white
+
+-- ftd.text: Trizwit
+role: $inherited.types.label-large
+style: semi-bold
+color: white
+link: https://trizwit.com/
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+
+
+-- import: fastnfolio.trizwit.com/common
+
+-- component image-with-content:
+ftd.image-src pic:
+string number:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
+
+-- image-with-content-mobile:
+if: { ftd.device == "mobile" }
+pic: $image-with-content.pic
+number: $image-with-content.number
+title: $image-with-content.title
+body: $image-with-content.body
+
+-- image-with-content-desktop:
+if: { ftd.device == "desktop" }
+pic: $image-with-content.pic
+number: $image-with-content.number
+title: $image-with-content.title
+body: $image-with-content.body
+
+-- end: ftd.column
+
+-- end: image-with-content
+
+
+
+
+
+
+
+
+
+
+-- component image-with-content-mobile:
+ftd.image-src pic:
+string number:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 32
+
+-- ftd.column:
+margin-horizontal.px: 20
+
+-- ftd.image:
+src: $image-with-content-mobile.pic
+width.fixed.percent: 80
+align-self: center
+border-radius.px: 20
+
+-- ftd.column:
+margin-vertical.px: 24
+
+-- ftd.text: $image-with-content-mobile.number
+style: bold
+role: $inherited.types.heading-large
+color: #FFFFFF
+margin-horizontal.px: 20
+opacity: 0.7
+
+-- ftd.text: $image-with-content-mobile.title
+align-self: center
+style: bold
+role: $inherited.types.heading-medium
+margin-bottom.px: 8
+
+-- ftd.text: $image-with-content-mobile.body
+role: $inherited.types.copy-regular
+color: #FFFFFF
+opacity: 0.7
+text-align: justify
+margin-horizontal.px: 20
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: image-with-content-mobile
+
+
+
+
+
+
+
+
+
+
+-- component image-with-content-desktop:
+ftd.image-src pic:
+string number:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+spacing.fixed.px: 200
+margin-horizontal.px: 80
+
+-- ftd.image:
+src: $image-with-content-desktop.pic
+border-radius.px: 20
+width.fixed.percent: 40
+height: auto
+align-self: center
+
+-- ftd.column:
+margin-vertical.px: 50
+align-self: center
+
+-- ftd.text: $image-with-content-desktop.number
+style: bold
+role: $inherited.types.heading-large
+color: #FFFFFF
+opacity: 0.7
+
+-- ftd.text: $image-with-content-desktop.title
+align-self: center
+role: $inherited.types.heading-medium
+margin-bottom.px: 38
+
+-- ftd.text: $image-with-content-desktop.body
+role: $inherited.types.copy-regular
+color: #FFFFFF
+opacity: 0.7
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: image-with-content-desktop
+
+
+
+
+
+
+
+
+
+
+-- component about:
+ftd.image-src pic:
+caption title:
+body body:
+
+-- ftd.column:
+padding-horizontal.vw if { ftd.device == "desktop" }: 5
+margin-top.vh if { ftd.device == "desktop" } : 10
+margin-bottom.vh if { ftd.device == "desktop" } : 5
+margin-vertical.vh if { ftd.device == "mobile" } : 1
+id: aboutus
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+
+-- ftd.column:
+margin-vertical.px: 32
+margin-horizontal.px: 32
+align-content: center
+
+-- ftd.text: $about.title
+role: $inherited.types.heading-large
+text-align: center
+color: #d2b863
+
+-- ftd.text: $about.body
+role: $inherited.types.copy-regular
+color: White
+text-align: center
+opacity: 0.8
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $about.pic
+width.fixed.percent: 90
+align-self: center
+border-radius.px: 20
+
+-- end: ftd.column
+
+-- ftd.row:
+if: { ftd.device == "desktop" }
+
+-- ftd.column:
+align-self: center
+margin-left.percent: 4
+margin-right.percent: 6
+
+-- ftd.text: $about.title
+role: $inherited.types.heading-large
+color: #d2b863
+
+-- ftd.text: $about.body
+margin-top.vh: 2
+margin-right.percent: 10
+role: $inherited.types.copy-regular
+text-align: justify
+color: White
+opacity: 0.8
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $about.pic
+width.fixed.percent: 40
+align-self: center
+border-radius.px: 20
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: about
+
+
+
+
+
+
+
+
+
+
+
+-- component image-with-content-2:
+ftd.image-src pic:
+string number:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
+
+-- image-with-content-mobile-2:
+if: { ftd.device == "mobile" }
+pic: $image-with-content-2.pic
+number: $image-with-content-2.number
+title: $image-with-content-2.title
+body: $image-with-content-2.body
+
+-- image-with-content-desktop-2:
+if: { ftd.device == "desktop" }
+pic: $image-with-content-2.pic
+number: $image-with-content-2.number
+title: $image-with-content-2.title
+body: $image-with-content-2.body
+
+-- end: ftd.column
+
+-- end: image-with-content-2
+
+
+
+
+
+
+
+
+
+
+-- component image-with-content-mobile-2:
+ftd.image-src pic:
+string number:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 32
+
+-- ftd.column:
+margin-horizontal.px: 20
+
+-- ftd.image:
+src: $image-with-content-mobile-2.pic
+width.fixed.percent: 80
+align-self: center
+border-radius.px: 20
+
+-- ftd.column:
+margin-vertical.px: 24
+
+-- ftd.text: $image-with-content-mobile-2.number
+style: bold
+role: $inherited.types.heading-large
+color: #FFFFFF
+margin-horizontal.px: 20
+opacity: 0.7
+
+-- ftd.text: $image-with-content-mobile-2.title
+align-self: center
+style: bold
+role: $inherited.types.heading-medium
+margin-bottom.px: 8
+
+-- ftd.text: $image-with-content-mobile-2.body
+role: $inherited.types.copy-regular
+color: #FFFFFF
+opacity: 0.7
+text-align: justify
+margin-horizontal.px: 20
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: image-with-content-mobile-2
+
+
+
+
+
+
+
+
+
+
+-- component image-with-content-desktop-2:
+ftd.image-src pic:
+string number:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+spacing.fixed.px: 200
+margin-horizontal.px: 80
+
+-- ftd.column:
+margin-vertical.px: 50
+align-self: center
+
+-- ftd.text: $image-with-content-desktop-2.number
+style: bold
+role: $inherited.types.heading-large
+color: #FFFFFF
+opacity: 0.7
+
+-- ftd.text: $image-with-content-desktop-2.title
+align-self: center
+role: $inherited.types.heading-medium
+margin-bottom.px: 38
+
+-- ftd.text: $image-with-content-desktop-2.body
+role: $inherited.types.copy-regular
+color: #FFFFFF
+opacity: 0.7
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $image-with-content-desktop-2.pic
+border-radius.px: 20
+width.fixed.percent: 40
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: image-with-content-desktop-2
+
+
+
+
+
+
+
+
+
+
+-- component sponsor-section:
+caption title:
+children card:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-vertical.vh: 3
+margin-bottom.vh: 10
+id: sponsors
+
+-- ftd.text: $sponsor-section.title
+role: $inherited.types.heading-medium
+margin-vertical.vh: 3
+color: White
+
+-- ftd.row:
+spacing.fixed.px: 32
+width: fill-container
+align-content: center
+children: $sponsor-section.card
+wrap: true
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: sponsor-section
+
+
+
+
+
+
+
+
+
+
+-- component container-with-title:
+caption title:
+children c:
+string $container-id:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-vertical.vh: 3
+id: $container-with-title.container-id
+
+-- ftd.text: $container-with-title.title
+role: $inherited.types.heading-large
+color: #ffffff
+align-self: center
+margin-bottom.px if { ftd.device == "desktop" }: 64
+margin-bottom.px if { ftd.device == "mobile" }: 32
+
+-- ftd.column:
+width: fill-container
+children: $container-with-title.c
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: container-with-title
+
+
+
+
+
+
+
+
+
+
+-- component sponsor-card:
+optional caption name:
+ftd.image-src logo:
+boolean $is-active: false
+
+-- ftd.column:
+width.fixed.px: 360
+height.fixed.px: 240
+background.solid if { !sponsor-card.is-active} : #FFFFFFEE
+background.solid if { sponsor-card.is-active}  : #FFFFFF
+border-width.px: 4
+border-color if { !sponsor-card.is-active}: #FFFFFFEE
+border-color if { sponsor-card.is-active} : #f20487
+border-radius.px: 20
+align-content: center
+padding.px: 16
+$on-mouse-enter$: $ftd.set-bool($a = $sponsor-card.is-active, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $sponsor-card.is-active, v = false)
+shadow: $common.box
+
+-- ftd.image:
+src: $sponsor-card.logo
+height.fixed.px: 100
+max-width.fixed.percent: 100
+
+-- ftd.text: $sponsor-card.name
+if: { sponsor-card.name != NULL }
+role: $inherited.types.heading-tiny
+color: #170f1e
+style: semi-bold
+margin-top.px: 16
+
+-- end: ftd.column
+
+-- end: sponsor-card
+
+
+
+
+
+
+
+
+
+
+
+
+-- component button-1:
+caption title: 
+string link:
+boolean $is-active-1: false
+
+-- ftd.row:
+padding-horizontal.px: 12
+padding-vertical.px: 16
+border-radius.px: 32
+background.solid: Yellow
+link: $button-1.link
+$on-mouse-enter$: $ftd.set-bool($a = $button-1.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $button-1.is-active-1, v = false)
+border-bottom-width.px if { button-1.is-active-1}: 2
+
+-- ftd.text: $button-1.title
+
+-- end: ftd.row
+
+-- end: button-1
+
+
+
+
+
+
+
+
+
+-- component button-2:
+caption title: 
+string link:
+boolean $is-active: false
+
+-- ftd.row:
+width.fixed.px: 100
+align-content: center
+padding-horizontal.px: 12
+padding-vertical.px: 16
+border-radius.px: 10
+background.solid: #d2b863
+link: $button-2.link
+border-width.px: 2
+
+-- ftd.text: $button-2.title
+role: $inherited.types.label-large
+color: #181939
+
+-- end: ftd.row
+
+-- end: button-2
+
+
+
+
+
+
+
+
+
+
+-- component button-3:
+caption title: 
+string link:
+boolean $is-active: false
+
+-- ftd.row:
+margin-vertical.px: 24
+padding-horizontal.px: 12
+padding-vertical.px: 16
+border-radius.px: 10
+background.solid if { button-3.is-active} : White
+background.solid: #d2b863
+$on-mouse-enter$: $ftd.set-bool($a = $button-3.is-active, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $button-3.is-active, v = false)
+link: $button-3.link
+
+-- ftd.text: $button-3.title
+role: $inherited.types.heading-small
+style: bold
+color: White
+color if { button-3.is-active}: #d2b863
+
+-- end: ftd.row
+
+-- end: button-3
+
+
+
+
+
+
+
+
+-- component button-4:
+caption title: 
+string link:
+boolean $is-active: false
+
+-- ftd.row:
+margin-vertical.px: 24
+padding-horizontal.px: 24
+padding-vertical.px: 16
+border-radius.px: 10
+background.solid if { button-4.is-active} : White
+background.solid: #d2b863
+$on-mouse-enter$: $ftd.set-bool($a = $button-4.is-active, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $button-4.is-active, v = false)
+link: $button-4.link
+
+-- ftd.text: $button-4.title
+role: $inherited.types.heading-small
+style: bold
+color: #181939
+color if { button-4.is-active}: #2821f1
+
+-- end: ftd.row
+
+-- end: button-4
+
+
+
+
+
+
+
+
+
+
+-- component button-5:
+caption title: 
+string link:
+boolean $is-active: false
+
+-- ftd.row:
+align-content: center
+width.fixed.px: 120
+padding-horizontal.px: 12
+padding-vertical.px: 16
+border-radius.px: 10
+background.solid if { button-5.is-active} : White
+background.solid: #d2b863
+$on-mouse-enter$: $ftd.set-bool($a = $button-5.is-active, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $button-5.is-active, v = false)
+link: $button-5.link
+
+-- ftd.text: $button-5.title
+role: $inherited.types.label-large
+style: bold
+color: #181939
+color if { button-5.is-active}: #2821f1
+
+-- end: ftd.row
+
+-- end: button-5
+
+
+
+
+
+
+
+
+
+-- component hero:
+caption heading:
+optional string text-1:
+optional string text-2:
+optional string text-3:
+string cta-button-1:
+body content:
+
+-- ftd.column:
+width: fill-container
+
+-- hero-mobile:
+if: { ftd.device == "mobile" }
+heading: $hero.heading
+text-1: $hero.text-1
+cta-button-1: $hero.cta-button-1
+content: $hero.content
+
+-- hero-desktop:
+if: { ftd.device == "desktop" }
+heading: $hero.heading
+text-1: $hero.text-1
+cta-button-1: $hero.cta-button-1
+content: $hero.content
+
+-- end: ftd.column
+
+-- end: hero
+
+
+
+
+-- component hero-mobile:
+caption heading:
+optional string text-1:
+optional string text-2:
+optional string text-3:
+string cta-button-1:
+body content:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+;;background.image: $assets.files.assets.bg-2.png
+height.fixed.vh: 100
+
+-- ftd.column:
+margin-vertical.px: 24
+width: fill-container
+padding-horizontal.vw: 5
+align-content: center
+align-self: center
+
+-- ftd.text: $hero-mobile.heading
+role: $inherited.types.heading-hero
+style: bold
+text-align: center
+color: white
+
+-- ftd.text: $hero-mobile.content
+margin-top.vh: 1
+margin-bottom.vh: 5
+role: $inherited.types.heading-large
+color: White
+text-align: center
+
+-- ftd.row:
+if: { hero-mobile.text-1 != NULL }
+spacing.fixed.px: 8
+
+-- ftd.image:
+src: $assets.files.assets.calendar-white.png
+height.fixed.px: 24
+align-self: center
+
+-- ftd.text: $hero-mobile.text-1
+if: { hero-mobile.text-1 != NULL }
+margin-vertical.vh: 1
+role: $inherited.types.heading-small
+align-self: center
+color: white
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 8
+
+-- ftd.image:
+if: { hero-mobile.text-2 != NULL }
+src: $assets.files.assets.clock.svg
+height.fixed.px: 24
+align-self: center
+
+-- ftd.text: $hero-mobile.text-2
+if: { hero-mobile.text-2 != NULL }
+margin-vertical.vh: 1
+role: $inherited.types.heading-small
+align-self: center
+color: white
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { hero-mobile.text-3 != NULL }
+spacing.fixed.px: 8
+
+-- ftd.image:
+src: $assets.files.assets.location-2.png
+height.fixed.px: 24
+align-self: center
+
+-- ftd.text: $hero-mobile.text-3
+if: { hero-mobile.text-3 != NULL }
+margin-vertical.vh: 1
+role: $inherited.types.heading-small
+align-self: center
+color: #ffac1d
+
+-- end: ftd.row
+
+-- button-3: $hero-mobile.cta-button-1
+link: https://github.com/Trizwit/fastnfoliotemp
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: hero-mobile
+
+
+
+
+
+
+-- component hero-desktop:
+caption heading:
+optional string text-1:
+optional string text-2:
+optional string text-3:
+string cta-button-1:
+body content:
+
+-- ftd.row:
+width: fill-container
+;;background.image: $assets.files.assets.bg.png
+height.fixed.vh: 100
+
+
+-- ftd.column:
+padding.vh: 16
+width: fill-container
+align-content: center
+align-self: center
+
+-- ftd.text: $hero-desktop.heading
+role: $inherited.types.heading-hero
+style: bold
+text-align: center
+color: white
+
+-- ftd.text: $hero-desktop.content
+margin-top.vh: 1
+margin-bottom.vh: 5
+role: $inherited.types.heading-large
+style: regular
+color: #d2b863
+
+-- ftd.row:
+spacing.fixed.px: 16
+
+-- ftd.row:
+if: { hero-desktop.text-1 != NULL }
+spacing.fixed.px: 8
+
+-- ftd.image:
+src: $assets.files.assets.calendar-white.png
+height.fixed.px: 48
+align-self: center
+
+-- ftd.text: $hero-desktop.text-1
+if: { hero-desktop.text-1 != NULL }
+margin-vertical.vh: 1
+role: $inherited.types.heading-medium
+align-self: center
+color: white
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { hero-desktop.text-2 != NULL }
+spacing.fixed.px: 8
+
+-- ftd.image:
+src: $assets.files.assets.clock.svg
+height.fixed.px: 48
+align-self: center
+
+-- ftd.text: $hero-desktop.text-2
+if: { hero-desktop.text-2 != NULL }
+margin-vertical.vh: 1
+role: $inherited.types.heading-medium
+align-self: center
+color: white
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { hero-desktop.text-3 != NULL }
+spacing.fixed.px: 8
+
+-- ftd.image:
+src: $assets.files.assets.location-2.png
+height.fixed.px: 48
+align-self: center
+
+-- ftd.text: $hero-desktop.text-3
+if: { hero-desktop.text-3 != NULL }
+margin-vertical.vh: 1
+role: $inherited.types.heading-medium
+align-self: center
+color: #faac1d
+
+-- end: ftd.row
+
+-- button-4: $hero-desktop.cta-button-1
+link: https://github.com/Trizwit/fastnfoliotemp
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: hero-desktop
