@@ -1147,7 +1147,7 @@ body content:
 -- ftd.column:
 width: fill-container
 align-content: center
-background.image: $assets.files.assets.bg-2.png
+;;background.image: $assets.files.assets.bg-2.png
 height.fixed.vh: 100
 
 -- ftd.column:
@@ -1248,7 +1248,7 @@ body content:
 
 -- ftd.row:
 width: fill-container
-background.image: $assets.files.assets.bg.png
+;;background.image: $assets.files.assets.bg.png
 height.fixed.vh: 100
 
 
