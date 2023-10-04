@@ -34,7 +34,7 @@ become a vital part of this mission.
 -- lib.container-with-title: Why fas10?
 $container-id: why
 
--- lib.image-with-content: Empowering Developers for the Future:
+-- lib.image-with-content-2: Empowering Developers for the Future
 pic: $assets.files.assets.empower.png
 number: 01
 
@@ -45,7 +45,7 @@ efficiently and with high-quality components. This means smoother development wo
 reduced development time, and ultimately, the ability to bring creative ideas to life more 
 easily.
 
--- lib.image-with-content: Building a Strong Open-Source Community
+-- lib.image-with-content-2: Building a Strong Open-Source Community
 pic: $assets.files.assets.open-source.png
 number: 02
 
@@ -56,8 +56,8 @@ them with the guidance and support they need to become proficient with FASTN and
 open-source practices. This community-building aspect ensures that the open-source spirit 
 continues to thrive.
 
--- lib.image-with-content: Recognition and Rewards
-pic: $assets.files.assets.reward.avif
+-- lib.image-with-content-2: Recognition and Rewards
+pic: $assets.files.assets.reward.png
 number: 03
 
 In addition to skill development and community building, "FAS10" offers tangible rewards 
@@ -66,6 +66,37 @@ source, serving as a digital badge of honor. Those who go above and beyond by cr
 unique components following the guidelines have the chance to earn exciting swag items. 
 Additionally, outstanding Twitter posts can win digital rewards, adding an element of 
 friendly competition to the campaign.
+
+-- end: lib.container-with-title
+
+-- lib.container-with-title: How to contribute?
+$container-id: contribute
+
+-- lib.image-with-content: Learn
+pic: $assets.files.assets.learn.png
+number: 01
+
+- Gain a foundational understanding of FASTN.
+- Learn how to build responsive components using FASTN.
+- Participate in our live coding sessions.
+- Join the FASTN Discord server for any questions or clarifications.
+
+
+-- lib.image-with-content-2: Build
+pic: $assets.files.assets.build.png
+number: 02
+
+- Fork the Trizwit/FastnUI repository.
+- Create your unique component following the provided instructions.
+- Submit a Pull Request to the Trizwit/FastnUI Library Repository.
+- Collaborate with the community to make necessary improvements.
+
+-- lib.image-with-content: Share
+pic: $assets.files.assets.share.png
+number: 03
+
+- Share your FAS10 journey on Twitter.
+- Mention @fastn and @trizwit in your tweets to let us know your story.
 
 -- end: lib.container-with-title
 
