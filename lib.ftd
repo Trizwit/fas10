@@ -194,7 +194,7 @@ link: index.html
 role: $inherited.types.heading-tiny
 margin-top.px: 8
 color: white
-link: index.html#aboutus
+link: index.html#about
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
 
@@ -202,14 +202,14 @@ $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 role: $inherited.types.heading-tiny
 margin-top.px: 8
 color: white
-link: index.html#sponsors
+link: index.html#why
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
 -- ftd.text: $navbar-mobile.cta-text-4
 role: $inherited.types.heading-tiny
 margin-top.px: 8
 color: white
-link: index.html#participate
+link: index.html#contribute
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
 -- ftd.row:
@@ -278,15 +278,15 @@ cta-text-url: index.html
 
 -- navbar-text: 
 cta-text: $navbar-desktop.cta-text-2
-cta-text-url: index.html#aboutus
+cta-text-url: index.html#about
 
 -- navbar-text: 
 cta-text: $navbar-desktop.cta-text-3
-cta-text-url: index.html#sponsors
+cta-text-url: index.html#why
 
 -- navbar-text: 
 cta-text: $navbar-desktop.cta-text-4
-cta-text-url: index.html#participate
+cta-text-url: index.html#contribute
 
 -- ftd.row:
 spacing.fixed.px: 16
@@ -590,7 +590,8 @@ body body:
 
 -- ftd.column:
 padding-horizontal.vw if { ftd.device == "desktop" }: 5
-margin-vertical.vh if { ftd.device == "desktop" } : 5
+margin-top.vh if { ftd.device == "desktop" } : 10
+margin-bottom.vh if { ftd.device == "desktop" } : 5
 margin-vertical.vh if { ftd.device == "mobile" } : 1
 id: about
 
