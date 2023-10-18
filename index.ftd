@@ -69,6 +69,15 @@ friendly competition to the campaign.
 
 -- end: lib.container-with-title
 
+-- lib.badgecard:
+heading: Earn Badges
+badge1: $assets.files.assets.badge1.jpg
+badge2: $assets.files.assets.badge2.jpg
+badge3: $assets.files.assets.badge3.jpg
+badge4: $assets.files.assets.badge4.jpg
+badge5: $assets.files.assets.badge5.jpg
+
+
 -- lib.container-with-title: How to contribute?
 $container-id: contribute
 

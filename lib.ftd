@@ -1349,3 +1349,211 @@ link: $hero-desktop.cta-button-1-url
 -- end: ftd.row
 
 -- end: hero-desktop
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component badgecard:
+caption heading:
+ftd.image-src badge1:
+ftd.image-src badge2:
+ftd.image-src badge3:
+ftd.image-src badge4:
+ftd.image-src badge5:
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+margin-bottom.px: 30
+
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
+width: fill-container
+height: hug-content
+
+-- lib.desktop-badgecard:
+heading: $badgecard.heading
+badge1: $badgecard.badge1
+badge2: $badgecard.badge2
+badge3: $badgecard.badge3
+badge4: $badgecard.badge4
+badge5: $badgecard.badge5
+
+-- end: ftd.column
+
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+
+-- lib.mob-badgecard:
+heading: $badgecard.heading
+badge1: $badgecard.badge1
+badge2: $badgecard.badge2
+badge3: $badgecard.badge3
+badge4: $badgecard.badge4
+badge5: $badgecard.badge5
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: badgecard
+
+
+
+
+
+
+
+
+
+
+
+-- component desktop-badgecard: 
+caption heading:
+ftd.image-src badge1:
+ftd.image-src badge2:
+ftd.image-src badge3:
+ftd.image-src badge4:
+ftd.image-src badge5:
+
+
+
+
+-- ftd.column:
+align-self: center
+
+-- ftd.text: $desktop-badgecard.heading
+role: $inherited.types.heading-large
+style: bold
+align-self: center
+color: white
+padding-bottom.px: 40
+
+
+
+-- ftd.row:
+width: fill-container
+height: fill-container
+align-content: center
+
+-- ftd.image:
+src: $desktop-badgecard.badge1
+height.fixed.px: 130 
+border-radius.px: 10
+margin.px: 10
+
+-- ftd.image:
+src: $desktop-badgecard.badge2
+height.fixed.px: 130
+border-radius.px: 10
+margin.px: 10
+
+-- ftd.image:
+src: $desktop-badgecard.badge3
+height.fixed.px: 130
+border-radius.px: 10
+margin.px: 10
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+height: fill-container
+align-content: center
+
+-- ftd.image:
+src: $desktop-badgecard.badge4
+height.fixed.px: 130
+border-radius.px: 10
+margin.px: 10
+
+-- ftd.image:
+src: $desktop-badgecard.badge5
+height.fixed.px: 130
+border-radius.px: 10
+margin.px: 10
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+
+-- end: desktop-badgecard
+
+
+
+
+
+
+
+
+
+
+-- component mob-badgecard:
+caption heading:
+ftd.image-src badge1:
+ftd.image-src badge2:
+ftd.image-src badge3:
+ftd.image-src badge4:
+ftd.image-src badge5:
+
+
+
+-- ftd.column:
+align-self: center
+
+
+-- ftd.text: $mob-badgecard.heading
+role: $inherited.types.heading-large
+style: bold
+align-self: center
+color: white
+padding-bottom.px: 40
+
+
+-- ftd.image:
+src: $mob-badgecard.badge1
+height.fixed.px: 130 
+border-radius.px: 10
+margin.px: 8
+
+-- ftd.image:
+src: $mob-badgecard.badge2
+height.fixed.px: 130 
+border-radius.px: 10
+margin.px: 8
+
+-- ftd.image:
+src: $mob-badgecard.badge3
+height.fixed.px: 130 
+border-radius.px: 10
+margin.px: 8
+
+-- ftd.image:
+src: $mob-badgecard.badge4
+height.fixed.px: 130 
+border-radius.px: 10
+margin.px: 8
+
+-- ftd.image:
+src: $mob-badgecard.badge5
+height.fixed.px: 130 
+border-radius.px: 10
+margin.px: 8
+
+-- end: ftd.column
+
+-- end: mob-badgecard
+
