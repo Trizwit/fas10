@@ -1450,19 +1450,19 @@ align-content: center
 
 -- ftd.image:
 src: $desktop-badgecard.badge1
-height.fixed.px: 130 
+height.fixed.px: 200 
 border-radius.px: 10
 margin.px: 10
 
 -- ftd.image:
 src: $desktop-badgecard.badge2
-height.fixed.px: 130
+height.fixed.px: 200
 border-radius.px: 10
 margin.px: 10
 
 -- ftd.image:
 src: $desktop-badgecard.badge3
-height.fixed.px: 130
+height.fixed.px: 200
 border-radius.px: 10
 margin.px: 10
 
@@ -1475,13 +1475,13 @@ align-content: center
 
 -- ftd.image:
 src: $desktop-badgecard.badge4
-height.fixed.px: 130
+height.fixed.px: 200
 border-radius.px: 10
 margin.px: 10
 
 -- ftd.image:
 src: $desktop-badgecard.badge5
-height.fixed.px: 130
+height.fixed.px: 200
 border-radius.px: 10
 margin.px: 10
 
@@ -1525,31 +1525,31 @@ padding-bottom.px: 40
 
 -- ftd.image:
 src: $mob-badgecard.badge1
-height.fixed.px: 130 
+height.fixed.px: 200 
 border-radius.px: 10
 margin.px: 8
 
 -- ftd.image:
 src: $mob-badgecard.badge2
-height.fixed.px: 130 
+height.fixed.px: 200 
 border-radius.px: 10
 margin.px: 8
 
 -- ftd.image:
 src: $mob-badgecard.badge3
-height.fixed.px: 130 
+height.fixed.px: 200 
 border-radius.px: 10
 margin.px: 8
 
 -- ftd.image:
 src: $mob-badgecard.badge4
-height.fixed.px: 130 
+height.fixed.px: 200 
 border-radius.px: 10
 margin.px: 8
 
 -- ftd.image:
 src: $mob-badgecard.badge5
-height.fixed.px: 130 
+height.fixed.px: 200 
 border-radius.px: 10
 margin.px: 8
 
